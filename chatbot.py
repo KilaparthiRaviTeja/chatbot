@@ -219,7 +219,7 @@ if st.session_state.step == 'awaiting_id':
 
 # --- Photo Upload ---
 if st.session_state.step == 'awaiting_photo':
-    uploaded_file = st.file_uploader("Upload your photo", type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("Upload your photo", type=["jpg", "jpeg","jfif", "png"])
     if uploaded_file:
         chat_bubble(f"[Uploaded: {uploaded_file.name}]", sender='user')
         handle_photo_upload(uploaded_file)
