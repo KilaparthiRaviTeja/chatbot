@@ -215,7 +215,7 @@ if st.session_state.step == 'awaiting_id':
         if submitted and user_input:
             chat_bubble(user_input, sender='user')
             bot_reply(user_input)
-            st.experimental_rerun()
+            st.rerun()
 
 # --- Photo Upload ---
 if st.session_state.step == 'awaiting_photo':
@@ -223,7 +223,7 @@ if st.session_state.step == 'awaiting_photo':
     if uploaded_file:
         chat_bubble(f"[Uploaded: {uploaded_file.name}]", sender='user')
         handle_photo_upload(uploaded_file)
-        st.experimental_rerun()
+        st.rerun()
 
 # --- Final Confirmation or Provider Switch ---
 if st.session_state.step in ['awaiting_confirmation', 'awaiting_provider_switch']:
@@ -233,9 +233,9 @@ if st.session_state.step in ['awaiting_confirmation', 'awaiting_provider_switch'
         if submitted and user_input:
             chat_bubble(user_input, sender='user')
             bot_reply(user_input.lower())
-            st.experimental_rerun()
+            st.rerun()
 
 # --- Reset ---
 if st.button("🔄 Reset Chat"):
     st.session_state.clear()
-    st.experimental_rerun()
+    st.rerun()
