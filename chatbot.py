@@ -88,7 +88,7 @@ if 'step' not in st.session_state:
 # --- Existing Records for Duplicate Check ---
 existing_records = [
     {"id": "123-45-6789", "photo": "passport.png"},
-    {"id": "555-66-7777", "photo": "duplicate.png"},
+    {"id": "123-45-6789", "photo": "passport.jpg"},
     {"id": "999-88-7777", "photo": "jane.png"},
 ]
 
